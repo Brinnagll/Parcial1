@@ -223,7 +223,6 @@ namespace ParcialBrinnaGorena.Controllers
         // GET api/Account/ExternalLogin
         [OverrideAuthentication]
         [HostAuthentication(DefaultAuthenticationTypes.ExternalCookie)]
-        [AllowAnonymous]
         [Route("ExternalLogin", Name = "ExternalLogin")]
         public async Task<IHttpActionResult> GetExternalLogin(string provider, string error = null)
         {
@@ -319,7 +318,6 @@ namespace ParcialBrinnaGorena.Controllers
         }
 
         // POST api/Account/Register
-        [AllowAnonymous]
         [Route("Register")]
         public async Task<IHttpActionResult> Register(RegisterBindingModel model)
         {
